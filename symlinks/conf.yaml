@@ -12,6 +12,7 @@
 - link:
     ~/.bash_profile: shell/bash/.bash_profile
     ~/.bashrc: shell/bash/.bashrc
+    ~/.profile: shell/bash/.profile
     ~/.zimrc: shell/zsh/.zimrc
     ~/.zlogin: shell/zsh/.zlogin
     ~/.zshenv: shell/zsh/.zshenv
