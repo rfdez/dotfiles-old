@@ -20,3 +20,4 @@
     ~/.gitconfig: git/.gitconfig
     ~/.gitattributes: git/.gitattributes
     ~/.gitignore_global: git/.gitignore_global
+    ~/.vimrc: editors/vim/.vimrc
