@@ -1,0 +1,16 @@
+[user]
+	name = Raúl Fernández Fernández
+	email = r.fernandez@flexiw.com
+
+[fetch]
+	prune = true
+
+[push]
+	default = simple
+
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes
+
+[pull]
+	rebase = true
