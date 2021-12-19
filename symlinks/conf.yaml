@@ -13,12 +13,12 @@
     ~/.bash_profile: shell/bash/.bash_profile
     ~/.bashrc: shell/bash/.bashrc
     ~/.profile: shell/bash/.profile
+    ~/.inputrc: shell/.inputrc
     ~/.zimrc: shell/zsh/.zimrc
     ~/.zlogin: shell/zsh/.zlogin
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
-    ~/.inputrc: shell/.inputrc
     ~/.gitconfig: git/.gitconfig
-    ~/.gitattributes: git/.gitattributes
     ~/.gitignore_global: git/.gitignore_global
+    ~/.gitattributes: git/.gitattributes
     ~/.vimrc: editors/vim/.vimrc
