@@ -44,4 +44,7 @@ export path=(
   "/usr/bin"
   "/usr/sbin"
   "/sbin"
+  "/snap/bin"
+  "/usr/bin/snap"
+  "/snap"
 )
