@@ -6,7 +6,8 @@
       force: true
 
 - link:
-    ~/.dotly: os/linux/.dotly
+    /etc/default/keyboard: os/linux/configs/keyboard
     ~/.config/Code/User/keybindings.json: editors/code/keybindings.json
     ~/.config/Code/User/settings.json: editors/code/settings.json
     ~/.config/Code/User/snippets: editors/code/snippets
+    ~/.dotly: os/linux/.dotly
