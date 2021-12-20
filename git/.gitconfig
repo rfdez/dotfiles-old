@@ -1,6 +1,7 @@
 [user]
 	name = Raúl Fernández Fernández
 	email = r.fernandez@flexiw.com
+	signingkey = C28B04A8F68CD51D
 
 [fetch]
 	prune = true
@@ -14,3 +15,5 @@
 
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
