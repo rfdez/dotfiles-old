@@ -47,4 +47,7 @@ export path=(
   "/snap/bin"
   "/usr/bin/snap"
   "/snap"
+  "/var/snap"
+  "/var/lib/snapd"
+  "$HOME/snap"
 )
