@@ -1,4 +1,8 @@
 {
+    // GIT
     "git.confirmSync": false,
-    "explorer.confirmDelete": false
+    // Explorer
+    "explorer.confirmDelete": false,
+    // Go
+    "go.goroot": "/snap/go/current"  
 }
