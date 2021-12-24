@@ -1,8 +1,15 @@
 {
+    //Workbench
+    // "workbench.activityBar.visible": false,
+    // "workbench.editor.showTabs": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Codely Dark",
+    // Window
+    "window.menuBarVisibility": "toggle",
     // GIT
     "git.confirmSync": false,
     // Explorer
     "explorer.confirmDelete": false,
     // Go
-    "go.goroot": "/snap/go/current"  
+    "go.goroot": "/snap/go/current"
 }
