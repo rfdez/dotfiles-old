@@ -35,3 +35,11 @@ if [[ "${fonts[*]}" =~ "${required_font}" ]]; then
 else
     dconf write $DCONFDIR/:$PROFILE_ID/use-system-font true
 fi
+
+if command -v tmux>/dev/null; then
+    # [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux new-session -A -s main
+    dconf write $DCONFDIR/:$PROFILE_ID/use-custom-command true
+    dconf write $DCONFDIR/:$PROFILE_ID/custom-command "'tmux new-session -A -s main'"
+else
+    dconf write $DCONFDIR/:$PROFILE_ID/use-custom-command false
+fi
