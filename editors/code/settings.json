@@ -11,5 +11,7 @@
     // Explorer
     "explorer.confirmDelete": false,
     // Go
-    "go.goroot": "/snap/go/current"
+    "go.goroot": "/snap/go/current",
+    // Red Hat
+    "redhat.telemetry.enabled": false
 }
