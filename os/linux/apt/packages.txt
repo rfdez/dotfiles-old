@@ -1,0 +1,14 @@
+google-chrome-stable
+gnome-shell-extension-prefs
+pavucontrol
+vim
+git
+curl
+make
+build-essential
+python3-pip
+copyq
+font-manager
+default-jre
+tmux
+tldr
