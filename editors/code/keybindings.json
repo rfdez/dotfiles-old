@@ -10,7 +10,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+alt+f",
+        "key": "ctrl+shift+alt+n",
         "command": "explorer.newFile"
     },
     {
