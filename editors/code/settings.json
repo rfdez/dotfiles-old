@@ -12,6 +12,7 @@
     "git.confirmSync": false,
     // Explorer
     "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
     // Go
     "go.goroot": "/snap/go/current",
     // Red Hat
