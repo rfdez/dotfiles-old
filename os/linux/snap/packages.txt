@@ -6,3 +6,4 @@ kontena-lens
 teams
 postman
 spotify
+flameshot
