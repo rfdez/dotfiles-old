@@ -6,7 +6,6 @@
       force: true
 
 - link:
-    /etc/default/keyboard: os/linux/configs/keyboard
     ~/.config/rofi/config.rasi: os/linux/rofi/config.rasi
     ~/.config/rofi/raul-theme.rasi: os/linux/rofi/raul-theme.rasi
     ~/.config/rofi/rofimenu.rasi: os/linux/rofi/rofimenu.rasi
