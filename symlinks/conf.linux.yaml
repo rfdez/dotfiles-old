@@ -14,4 +14,5 @@
     ~/.config/Code/User/settings.json: editors/code/settings.json
     ~/.config/Code/User/snippets: editors/code/snippets
     ~/.tmux.conf: os/linux/tmux/.tmux.conf
+    ~/.config/autostart: os/linux/autostart
     ~/.dotly: os/linux/.dotly
