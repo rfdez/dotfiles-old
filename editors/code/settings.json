@@ -4,6 +4,8 @@
     // "workbench.editor.showTabs": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Codely Dark",
+    "workbench.activityBar.visible": false,
+    "workbench.editor.showTabs": false,
     // Window
     "window.menuBarVisibility": "toggle",
     // GIT

@@ -16,5 +16,9 @@
     {
         "key": "ctrl+shift+alt+f",
         "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+shift+alt+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
     }
 ]
