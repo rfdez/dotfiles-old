@@ -10,10 +10,14 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 ##?    gnome-terminal-theme
 docs::parse "$@"
 
-DCONFDIR=/org/gnome/terminal/legacy/profiles:
+DCONFROOT=/org/gnome/terminal/legacy
+DCONFDIR=${DCONFROOT}/profiles:
 PROFILE_ID=$(uuidgen)
 PROFILE_DANGER_ID=$(uuidgen)
 PROFILE_NAME=Raúl
+
+dconf write $DCONFROOT/headerbar false
+dconf write $DCONFROOT/default-show-menubar false
 
 dconf write $DCONFDIR/list "['$PROFILE_ID', '$PROFILE_DANGER_ID']"
 dconf write $DCONFDIR/default "'$PROFILE_ID'"
