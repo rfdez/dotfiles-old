@@ -22,6 +22,10 @@ alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
 
+# Directories quick access
+alias gtwp="cd $PROJECTS_HOME/Work"
+alias gtpp="cd $PROJECTS_HOME/Personal"
+
 # Docker
 alias dpa="docker system prune -af --volumes"
 alias dlc="docker container ls"
