@@ -12,34 +12,54 @@ docs::parse "$@"
 
 DCONFDIR=/org/gnome/terminal/legacy/profiles:
 PROFILE_ID=$(uuidgen)
+PROFILE_DANGER_ID=$(uuidgen)
 PROFILE_NAME=Raúl
 
-dconf write $DCONFDIR/list "['$PROFILE_ID']"
+dconf write $DCONFDIR/list "['$PROFILE_ID', '$PROFILE_DANGER_ID']"
 dconf write $DCONFDIR/default "'$PROFILE_ID'"
 
 dconf write $DCONFDIR/:$PROFILE_ID/visible-name "'$PROFILE_NAME'"
 
+dconf write $DCONFDIR/:$PROFILE_DANGER_ID/visible-name "'$PROFILE_NAME Danger'"
+
 dconf write $DCONFDIR/:$PROFILE_ID/use-theme-colors false
+
+dconf write $DCONFDIR/:$PROFILE_DANGER_ID/use-theme-colors false
 
 dconf write $DCONFDIR/:$PROFILE_ID/foreground-color "'#EBDBB2'"
 dconf write $DCONFDIR/:$PROFILE_ID/background-color "'#282828'"
 dconf write $DCONFDIR/:$PROFILE_ID/bold-color "'#FEFFFF'"
 
+dconf write $DCONFDIR/:$PROFILE_DANGER_ID/foreground-color "'#EBDBB2'"
+dconf write $DCONFDIR/:$PROFILE_DANGER_ID/background-color "'#650E1F'"
+dconf write $DCONFDIR/:$PROFILE_DANGER_ID/bold-color "'#FEFFFF'"
+
 dconf write $DCONFDIR/:$PROFILE_ID/palette "['#282828', '#F67667', '#B8BB26', '#FABD2F', '#84A498', '#D3859A', '#8EC07B', '#EBDBB2', '#928373', '#F28E82', '#B2B437', '#F1BF4A', '#95A19D', '#CD98A6', '#9EBD93', '#E5DDC7']"
+dconf write $DCONFDIR/:$PROFILE_DANGER_ID/palette "['#282828', '#F67667', '#B8BB26', '#FABD2F', '#84A498', '#D3859A', '#8EC07B', '#EBDBB2', '#928373', '#F28E82', '#B2B437', '#F1BF4A', '#95A19D', '#CD98A6', '#9EBD93', '#E5DDC7']"
 
 fonts=`fc-list : family | sort | uniq`
 required_font='IBM Plex Mono'
 if [[ "${fonts[*]}" =~ "${required_font}" ]]; then
     dconf write $DCONFDIR/:$PROFILE_ID/use-system-font false
     dconf write $DCONFDIR/:$PROFILE_ID/font "'$required_font 12'"
+
+    dconf write $DCONFDIR/:$PROFILE_DANGER_ID/use-system-font false
+    dconf write $DCONFDIR/:$PROFILE_DANGER_ID/font "'$required_font 12'"
 else
     dconf write $DCONFDIR/:$PROFILE_ID/use-system-font true
+
+    dconf write $DCONFDIR/:$PROFILE_DANGER_ID/use-system-font true
 fi
 
 if command -v tmux>/dev/null; then
     # [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux new-session -A -s main
     dconf write $DCONFDIR/:$PROFILE_ID/use-custom-command true
     dconf write $DCONFDIR/:$PROFILE_ID/custom-command "'tmux new-session -A -s main'"
+
+    dconf write $DCONFDIR/:$PROFILE_DANGER_ID/use-custom-command true
+    dconf write $DCONFDIR/:$PROFILE_DANGER_ID/custom-command "'tmux new-session -A -s main'"
 else
     dconf write $DCONFDIR/:$PROFILE_ID/use-custom-command false
+
+    dconf write $DCONFDIR/:$PROFILE_DANGER_ID/use-custom-command false
 fi
