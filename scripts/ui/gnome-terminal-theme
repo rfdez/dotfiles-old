@@ -17,7 +17,7 @@ PROFILE_DANGER_ID=$(uuidgen)
 PROFILE_NAME=Raúl
 
 dconf write $DCONFROOT/headerbar "@mb false"
-dconf write $DCONFROOT/default-show-menubar "@mb false"
+dconf write $DCONFROOT/default-show-menubar false
 
 dconf write $DCONFDIR/list "['$PROFILE_ID', '$PROFILE_DANGER_ID']"
 dconf write $DCONFDIR/default "'$PROFILE_ID'"
