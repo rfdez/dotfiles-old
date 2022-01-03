@@ -40,7 +40,7 @@ configuration {
     selected-urgent-background:  @urgent-foreground;
     selected-urgent-foreground:  @urgent-background;
 
-    font:                        "xos4 Terminus 20px";
+    font:                        "IBM Plex Mono 20px";
     text-color:                  @foreground;
 
 	margin:                      0px;
