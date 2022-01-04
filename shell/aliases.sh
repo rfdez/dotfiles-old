@@ -21,6 +21,7 @@ alias gpsf="git push --force"
 alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
+alias gcl="clone_git_repo"
 
 # Directories quick access
 alias gtwp="cd $PROJECTS_HOME/Work"
@@ -32,6 +33,7 @@ alias dlc="docker container ls"
 alias dli="docker image ls"
 alias dlv="docker volume ls"
 alias dln="docker network ls"
+alias dcon="_docker_connect"
 
 # Utils
 alias k='kill -9'
