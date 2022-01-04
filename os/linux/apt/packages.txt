@@ -8,3 +8,5 @@ xdotool
 wmctrl
 libxml2-utils
 rofi
+jq
+gnome-shell-extensions
