@@ -3,3 +3,7 @@
 source "$DOTFILES_PATH/shell/aliases.sh"
 source "$DOTFILES_PATH/shell/exports.sh"
 source "$DOTFILES_PATH/shell/functions.sh"
+
+set -o allexport
+source "$HOME/.env"
+set +o allexport
