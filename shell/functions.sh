@@ -18,6 +18,18 @@ function recent_dirs() {
   cd "$(echo "$selected" | sed "s/\~/$escaped_home/")" || echo "Invalid directory"
 }
 
+clone_git_repo() {
+  repo_url=$(curl -s "https://gitlab.com/api/v4/projects?private_token=$GITLAB_TOKEN&visibility=private&simple=true&per_page=100" | jq --raw-output ".[].ssh_url_to_repo" | fzf)
+  [ -z "$repo_url" ] && return 1
+  git clone "$repo_url"
+  echo "$repo_url"
+}
+
+_docker_connect() {
+  containerid=$(docker ps | tail -n +2 | fzf | awk '{print $1}')
+  docker exec -it $containerid bash
+}
+
 # reverse-search() {
 #   local selected num
 #   setopt localoptions noglobsubst noposixbuiltins pipefail HIST_FIND_NO_DUPS 2> /dev/null
