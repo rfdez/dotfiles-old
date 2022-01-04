@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/snap/bin/teams
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Microsoft Teams
+Name=Microsoft Teams
+Comment[en_US]=Team communication app
+Comment=Team communication app

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/snap/bin/flameshot
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Flameshot
+Name=Flameshot
+Comment[en_US]=Screeenshot app
+Comment=Screeenshot app
