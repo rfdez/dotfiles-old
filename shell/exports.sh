@@ -34,6 +34,8 @@ export QT_QPA_PLATFORM=xcb
 # ------------------------------------------------------------------------------
 export PROJECTS_HOME="$HOME/Code"
 
+export NPM_CONFIG_PREFIX="$HOME/.npm-global"
+
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
@@ -60,4 +62,7 @@ export path=(
   "/var/snap"
   "/var/lib/snapd"
   "$HOME/snap"
+  "$HOME/.yarn/bin"
+  "$HOME/.npm-global/bin"
+  "$HOME/.local/bin"
 )

@@ -21,7 +21,9 @@ alias gpsf="git push --force"
 alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
-alias gcl="clone_git_repo"
+alias glcl="clone_gitlab_repo"
+alias ghcl="clone_github_repo"
+alias multipull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
 
 # Directories quick access
 alias gtwp="cd $PROJECTS_HOME/Work"
@@ -39,5 +41,5 @@ alias dcon="_docker_connect"
 alias k='kill -9'
 alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
-alias o.='open .'
+alias o.='(open . &>/dev/null &)'
 alias up='dot package update_all'
