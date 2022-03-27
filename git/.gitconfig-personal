@@ -1,0 +1,21 @@
+[user]
+	name = Raúl Fernández Fernández
+	email = raulparri71@gmail.com
+	signingkey = 046E207E054DCA3F
+
+[fetch]
+	prune = true
+
+[push]
+	default = simple
+
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes
+	editor = vim
+	sshCommand = ssh -i ~/.ssh/raulfernandezdev
+
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true

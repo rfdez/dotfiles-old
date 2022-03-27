@@ -1,20 +1,6 @@
-[user]
-	name = Raúl Fernández Fernández
-	email = r.fernandez@flexiw.com
-	signingkey = C28B04A8F68CD51D
-
-[fetch]
-	prune = true
-
-[push]
-	default = simple
-
-[core]
-	excludesfile = ~/.gitignore_global
-	attributesfile = ~/.gitattributes
-  editor = vim
-
-[pull]
-	rebase = true
-[commit]
-	gpgsign = true
+[includeIf "gitdir:~/Code/Personal/"]
+  path = .gitconfig-personal
+[includeIf "gitdir:~/Code/Work/"]
+  path = .gitconfig-work
+[includeIf "gitdir:~/.dotfiles/"]
+  path = .gitconfig-work
