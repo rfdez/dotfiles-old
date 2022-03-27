@@ -19,6 +19,8 @@
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/.gitconfig: git/.gitconfig
+    ~/.gitconfig-personal: git/.gitconfig-personal
+    ~/.gitconfig-work: git/.gitconfig-work
     ~/.gitignore_global: git/.gitignore_global
     ~/.gitattributes: git/.gitattributes
     ~/.vimrc: editors/vim/.vimrc
