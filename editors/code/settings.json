@@ -2,41 +2,32 @@
   // Editor
   "editor.suggestSelection": "first",
   "editor.inlineSuggest.enabled": true,
-  "editor.fontFamily": "'Dank Mono', 'monospace', monospace",
+  "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 16,
   "editor.lineHeight": 1.5,
   "editor.fontLigatures": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.shellcheck": true
+  },
+  // Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
   // Terminal
-  "terminal.integrated.fontFamily": "'IBM Plex Mono', 'monospace', monospace",
+  "terminal.integrated.fontFamily": "'IBM Plex Mono',  Menlo, Monaco, 'Courier New', monospace",
   //Workbench
-  // "workbench.activityBar.visible": false,
-  // "workbench.editor.showTabs": false,
-  "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "Codely Dark",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.editor.showTabs": false,
   "workbench.activityBar.visible": false,
   // Window
   "window.menuBarVisibility": "toggle",
-  // GIT
+  // Git
   "git.confirmSync": false,
-  // Explorer
-  "explorer.confirmDelete": false,
-  "explorer.compactFolders": false,
-  "explorer.confirmDragAndDrop": false,
-  // GO
+  // Go
   "go.goroot": "/snap/go/current",
-  "files.associations": {
-    "*.gotmpl": "gotmpl"
-  },
-  // Red Hat
-  "redhat.telemetry.enabled": false,
   // vsintellicode
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // GitHub Copilot
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
-    "plaintext": true,
-    "markdown": true
-  }
+  // Typescript
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
