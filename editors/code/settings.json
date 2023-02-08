@@ -1,62 +1,63 @@
 {
-  "editor.suggestSelection": "first",
-  "editor.inlineSuggest.enabled": true,
-  "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 16,
-  "editor.lineHeight": 32,
-  "editor.fontLigatures": true,
-  "editor.minimap.enabled": false,
-  "editor.formatOnSave": true,
-  "editor.rulers": [
-    120
-  ],
-  "editor.wordWrap": "on",
-  "editor.wrappingIndent": "indent",
-  "editor.renderWhitespace": "all",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.smoothScrolling": true,
-  "editor.cursorBlinking": "expand",
-  "editor.multiCursorLimit": 100000,
-  "editor.linkedEditing": true,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.compactFolders": false,
-  "files.autoSave": "onFocusChange",
-  "terminal.integrated.fontFamily": "'IBM Plex Mono',  Menlo, Monaco, 'Courier New', monospace",
-  "terminal.integrated.fontSize": 16,
-  "terminal.integrated.lineHeight": 1.4,
-  "workbench.activityBar.visible": false,
-  "workbench.editor.untitled.hint": "hidden",
-  "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.showTabs": false,
-  "workbench.list.horizontalScrolling": true,
-  "workbench.list.smoothScrolling": true,
-  "workbench.sideBar.location": "left",
-  "workbench.colorTheme": "Codely Dark",
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.fontAliasing": "auto",
-  "window.menuBarVisibility": "toggle",
-  "git.autofetch": true,
-  "git.alwaysSignOff": true,
-  "git.fetchOnPull": true,
-  "git.rebaseWhenSync": true,
-  "git.showPushSuccessNotification": true,
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": true,
-    "markdown": true
-  },
-  "search.useGlobalIgnoreFiles": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "ci.yml"
-      ],
-      "url": "https://json.schemastore.org/github-workflow"
-    }
-  ],
-  "go.goroot": "/snap/go/current",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+	"editor.suggestSelection": "first",
+	"editor.inlineSuggest.enabled": true,
+	"editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontSize": 16,
+	"editor.lineHeight": 32,
+	"editor.fontLigatures": true,
+	"editor.minimap.enabled": false,
+	"editor.formatOnSave": true,
+	"editor.rulers": [
+		120
+	],
+	"editor.wordWrap": "on",
+	"editor.wrappingIndent": "indent",
+	"editor.renderWhitespace": "all",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.smoothScrolling": true,
+	"editor.cursorBlinking": "expand",
+	"editor.multiCursorLimit": 100000,
+	"editor.linkedEditing": true,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.compactFolders": false,
+	"files.autoSave": "onFocusChange",
+	"terminal.integrated.fontFamily": "'IBM Plex Mono',  Menlo, Monaco, 'Courier New', monospace",
+	"terminal.integrated.fontSize": 16,
+	"terminal.integrated.lineHeight": 1.4,
+	"workbench.activityBar.visible": false,
+	"workbench.editor.untitled.hint": "hidden",
+	"workbench.editor.highlightModifiedTabs": true,
+	"workbench.editor.showTabs": false,
+	"workbench.list.horizontalScrolling": true,
+	"workbench.list.smoothScrolling": true,
+	"workbench.sideBar.location": "left",
+	"workbench.colorTheme": "Codely Dark",
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.fontAliasing": "auto",
+	"window.menuBarVisibility": "toggle",
+	"git.confirmSync": false,
+	"git.autofetch": true,
+	"git.alwaysSignOff": true,
+	"git.fetchOnPull": true,
+	"git.rebaseWhenSync": true,
+	"git.showPushSuccessNotification": true,
+	"github.copilot.enable": {
+		"*": true,
+		"yaml": false,
+		"plaintext": true,
+		"markdown": true
+	},
+	"search.useGlobalIgnoreFiles": true,
+	"security.workspace.trust.untrustedFiles": "open",
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"ci.yml"
+			],
+			"url": "https://json.schemastore.org/github-workflow"
+		}
+	],
+	"go.goroot": "/snap/go/current",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
