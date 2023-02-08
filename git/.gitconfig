@@ -3,4 +3,4 @@
 [includeIf "gitdir:~/Code/Work/"]
   path = .gitconfig_work
 [includeIf "gitdir:~/.dotfiles/"]
-  path = .gitconfig_work
+  path = .gitconfig_personal
