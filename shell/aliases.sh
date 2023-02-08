@@ -3,10 +3,15 @@ alias sudo='sudo '
 
 alias ..="cd .."
 alias ...="cd ../.."
-alias ll="ls -l"
-alias la="ls -la"
+alias ll="exa -l --icons"
+alias la="exa -la --icons"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
+
+# Jumps
+alias gtwp="cd $PROJECTS_HOME/Work"
+alias gtpp="cd $PROJECTS_HOME/Personal"
+alias tmp="cd ~/Desktop/tmp"
 
 # Git
 alias gaa="git add -A"
@@ -21,25 +26,24 @@ alias gpsf="git push --force"
 alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
-alias glcl="clone_gitlab_repo"
-alias ghcl="clone_github_repo"
-alias multipull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
-
-# Directories quick access
-alias gtwp="cd $PROJECTS_HOME/Work"
-alias gtpp="cd $PROJECTS_HOME/Personal"
 
 # Docker
 alias dpa="docker system prune -af --volumes"
 alias dlc="docker container ls"
 alias dli="docker image ls"
-alias dlv="docker volume ls"
+alias dlvo="docker volume ls"
 alias dln="docker network ls"
-alias dcon="_docker_connect"
 
 # Utils
 alias k='kill -9'
 alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
 alias o.='(open . &>/dev/null &)'
-alias up='dot package update_all'
+
+alias up="dot package update_all"
+alias copy='pbcopy'
+alias dc='dot docker connect'
+alias htop='btm'
+
+# Package managers
+alias pn='pnpm'

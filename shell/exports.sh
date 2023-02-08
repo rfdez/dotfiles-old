@@ -5,13 +5,27 @@ export CODELY_THEME_MINIMAL=false
 export CODELY_THEME_MODE="dark"
 export CODELY_THEME_PROMPT_IN_NEW_LINE=false
 export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
+export CODELY_THEME_STATUS_ICON_OK="👍"
+export CODELY_THEME_STATUS_ICON_KO="👎"
+
+if [[ $TERMINAL_EMULATOR == "JetBrains-JediTerm"* ]]; then
+  export CODELY_THEME_MINIMAL=true
+fi
+
+if [[ $TERM_PROGRAM == "vscode"* ]]; then
+  export CODELY_THEME_MINIMAL=true
+fi
 
 # ------------------------------------------------------------------------------
 # Languages
 # ------------------------------------------------------------------------------
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
+export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 export GEM_HOME="$HOME/.gem"
 export GOPATH="$HOME/.go"
+export GOBIN="$HOME/.go/bin"
+export BREW_HOME="/home/linuxbrew/.linuxbrew"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # ------------------------------------------------------------------------------
 # Apps
@@ -34,8 +48,6 @@ export QT_QPA_PLATFORM=xcb
 # ------------------------------------------------------------------------------
 export PROJECTS_HOME="$HOME/Code"
 
-export NPM_CONFIG_PREFIX="$HOME/.npm-global"
-
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
@@ -47,6 +59,7 @@ export path=(
   "$GEM_HOME/bin"
   "$GOPATH/bin"
   "$HOME/.cargo/bin"
+  "/usr/local/kubebuilder/bin"
   "/usr/local/opt/ruby/bin"
   "/usr/local/opt/python/libexec/bin"
   "/opt/homebrew/bin"
@@ -63,6 +76,8 @@ export path=(
   "/var/lib/snapd"
   "$HOME/snap"
   "$HOME/.yarn/bin"
-  "$HOME/.npm-global/bin"
+  "$HOME/.config/yarn/global/node_modules/.bin"
   "$HOME/.local/bin"
+  "$HOME/.local/share/JetBrains/Toolbox/scripts"
+  "$BREW_HOME/bin"
 )
