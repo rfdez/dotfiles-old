@@ -6,8 +6,7 @@
       force: true
 
 - create:
-    - $DOTFILES_PATH/shell/bash/completions
-    - $DOTFILES_PATH/shell/bash/themes
+    - ~/.z
 
 - link:
     ~/.bash_profile: shell/bash/.bash_profile
@@ -19,8 +18,8 @@
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/.gitconfig: git/.gitconfig
-    ~/.gitconfig-personal: git/.gitconfig-personal
-    ~/.gitconfig-work: git/.gitconfig-work
+    ~/.gitconfig_personal: git/.gitconfig_personal
+    ~/.gitconfig_work: git/.gitconfig_work
     ~/.gitignore_global: git/.gitignore_global
     ~/.gitattributes: git/.gitattributes
     ~/.vimrc: editors/vim/.vimrc

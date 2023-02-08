@@ -1,6 +1,6 @@
 [includeIf "gitdir:~/Code/Personal/"]
-  path = .gitconfig-personal
+  path = .gitconfig_personal
 [includeIf "gitdir:~/Code/Work/"]
-  path = .gitconfig-work
+  path = .gitconfig_work
 [includeIf "gitdir:~/.dotfiles/"]
-  path = .gitconfig-work
+  path = .gitconfig_work
