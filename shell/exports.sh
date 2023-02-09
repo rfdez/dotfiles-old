@@ -37,6 +37,10 @@ else
 fi
 
 export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
+export FZF_CTRL_R_OPTS="$FZF_CTRL_R_OPTS
+  --header='ctrl-e to query explainshell.com'
+  --bind \"ctrl-e:execute(curl -sLG -o /dev/null -w '%{url_effective}' --data-urlencode cmd={} https://explainshell.com/explain | xargs open)\"
+"
 
 # ------------------------------------------------------------------------------
 # Window management
