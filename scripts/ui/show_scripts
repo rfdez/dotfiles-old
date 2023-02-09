@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+source "$DOTFILES_PATH/scripts/core/selector.sh"
+
+##? Show UI scripts
+#?? 1.0.0
+##?
+##? Usage:
+##?   show_scripts
+docs::parse "$@"
+
+scripts=(
+	"💻 utils open_project_in_vscode"
+)
+
+command=$(printf '%s\n' "${scripts[@]}" | selector::select)
+group=$(echo "$command" | awk '{print $2}')
+script=$(echo "$command" | awk '{print $3}')
+
+"$DOTLY_PATH/bin/dot" "$group" "$script"
