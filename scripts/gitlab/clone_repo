@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Clone a gitlab repo
+#?? 1.0.0
+##?
+##? Usage:
+##?   clone_repo
+docs::parse "$@"
+
+repo_url=$(curl -s "https://gitlab.com/api/v4/projects?private_token=$GITLAB_TOKEN&visibility=private&simple=true&per_page=100" | jq --raw-output ".[].ssh_url_to_repo" | fzf)
+[ -z "$repo_url" ] && return 1
+git clone "$repo_url"
+echo "$repo_url"

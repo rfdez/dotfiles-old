@@ -17,16 +17,3 @@ function recent_dirs() {
 
   cd "$(echo "$selected" | sed "s/\~/$escaped_home/")" || echo "Invalid directory"
 }
-
-clone_gitlab_repo() {
-  repo_url=$(curl -s "https://gitlab.com/api/v4/projects?private_token=$GITLAB_TOKEN&visibility=private&simple=true&per_page=100" | jq --raw-output ".[].ssh_url_to_repo" | fzf)
-  [ -z "$repo_url" ] && return 1
-  git clone "$repo_url"
-  echo "$repo_url"
-}
-
-clone_github_repo() {
-  repo_url=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/user/repos?per_page=200" | jq --raw-output ".[].ssh_url" | fzf)
-  git clone "$repo_url"
-  echo "$repo_url"
-}

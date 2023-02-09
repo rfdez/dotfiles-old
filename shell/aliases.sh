@@ -26,6 +26,8 @@ alias gpsf="git push --force"
 alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gl='$DOTLY_PATH/bin/dot git pretty-log'
+alias ghcl="dot github clone_repo"
+alias glcl="dot gitlab clone_repo"
 
 # Docker
 alias dpa="docker system prune -af --volumes"
