@@ -30,7 +30,7 @@ alias ghcl="dot github clone_repo"
 alias glcl="dot gitlab clone_repo"
 
 # Docker
-alias dpa="docker system prune -af --volumes"
+alias dpa="dot docker prune"
 alias dlc="docker container ls"
 alias dli="docker image ls"
 alias dlvo="docker volume ls"
