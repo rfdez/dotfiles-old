@@ -6,6 +6,8 @@
       force: true
 
 - link:
+    ~/.config/autostart: os/linux/autostart
+    ~/.xinputrc: os/linux/.xinputrc
     ~/.config/rofi/config.rasi: os/linux/rofi/config.rasi
     ~/.config/rofi/raul-theme.rasi: os/linux/rofi/raul-theme.rasi
     ~/.config/rofi/rofimenu.rasi: os/linux/rofi/rofimenu.rasi
@@ -13,6 +15,4 @@
     ~/.config/Code/User/settings.json: editors/code/settings.json
     ~/.config/Code/User/snippets: editors/code/snippets
     ~/.tmux.conf: os/linux/tmux/.tmux.conf
-    ~/.config/autostart: os/linux/autostart
-    ~/.xinputrc: os/linux/.xinputrc
     ~/.dotly: os/linux/.dotly
