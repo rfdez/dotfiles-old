@@ -21,11 +21,8 @@ fi
 # ------------------------------------------------------------------------------
 export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 export GEM_HOME="$HOME/.gem"
+export CARGO_HOME="$HOME/.cargo"
 export GOPATH="$HOME/.go"
-export GOBIN="$HOME/.go/bin"
-export BREW_HOME="/home/linuxbrew/.linuxbrew"
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # ------------------------------------------------------------------------------
 # Apps
@@ -43,6 +40,11 @@ export FZF_CTRL_R_OPTS="$FZF_CTRL_R_OPTS
 "
 
 # ------------------------------------------------------------------------------
+# HOMEBREW
+# ------------------------------------------------------------------------------
+export BREW_HOME="/home/linuxbrew/.linuxbrew"
+
+# ------------------------------------------------------------------------------
 # Window management
 # ------------------------------------------------------------------------------
 export QT_QPA_PLATFORM=xcb
@@ -55,15 +57,15 @@ export PROJECTS_HOME="$HOME/Code"
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
-export path=(
+path=(
   "$HOME/bin"
   "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
   "$JAVA_HOME/bin"
   "$GEM_HOME/bin"
   "$GOPATH/bin"
-  "$HOME/.cargo/bin"
-  "/usr/local/kubebuilder/bin"
+  "$CARGO_HOME/bin"
+  "$BREW_HOME/bin"
   "/usr/local/opt/ruby/bin"
   "/usr/local/opt/python/libexec/bin"
   "/opt/homebrew/bin"
@@ -73,15 +75,7 @@ export path=(
   "/usr/bin"
   "/usr/sbin"
   "/sbin"
-  "/snap/bin"
-  "/usr/bin/snap"
-  "/snap"
-  "/var/snap"
-  "/var/lib/snapd"
-  "$HOME/snap"
-  "$HOME/.yarn/bin"
-  "$HOME/.config/yarn/global/node_modules/.bin"
-  "$HOME/.local/bin"
-  "$HOME/.local/share/JetBrains/Toolbox/scripts"
-  "$BREW_HOME/bin"
+  "$path"
 )
+
+export path
