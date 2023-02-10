@@ -6,6 +6,7 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 source "$DOTFILES_PATH/scripts/emoji/.env"
 
 ##? Pick an emoji using rofi
+#?? 1.0.0
 ##?
 ##? Requirements:
 ##?     rofi, xsel, xdotool

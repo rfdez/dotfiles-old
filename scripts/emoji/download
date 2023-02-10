@@ -6,12 +6,13 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 source "$DOTFILES_PATH/scripts/emoji/.env"
 
 ##? Download all emoji from emojipedia
+#?? 1.0.0
 ##?
 ##? Requirements:
 ##?     curl, xmllint
 ##?
 ##? Usage:
-##?    download
+##?   download
 docs::parse "$@"
 
 # Urls of emoji to download.
