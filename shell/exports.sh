@@ -75,6 +75,7 @@ path=(
   "/usr/bin"
   "/usr/sbin"
   "/sbin"
+  "/snap/bin"
   "$path"
 )
 
