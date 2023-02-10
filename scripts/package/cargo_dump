@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Dump cargo packages
+#?? 1.0.0
+##?
+##? Usage:
+##?   cargo_dump
+docs::parse "$@"
+
+CARGO_DUMP_FILE_PATH="$DOTFILES_PATH/langs/rust/packages.txt"
+
+mkdir -p "$DOTFILES_PATH/langs/rust"
+
+cargo install --list | grep '^[a-zA-Z0-9_\-]* v[0-9.]*:$' | cut -d ' ' -f1 >"$CARGO_DUMP_FILE_PATH"
