@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Dump npm packages
+#?? 1.0.0
+##?
+##? Usage:
+##?   npm_dump
+docs::parse "$@"
+
+NPM_DUMP_FILE_PATH="$DOTFILES_PATH/langs/js/global_modules.txt"
+
+mkdir -p "$DOTFILES_PATH/langs/js"
+
+ls -1 `npm root -g` | grep -v npm >"$NPM_DUMP_FILE_PATH"
