@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Empty the trash and remove cache files
+#?? 1.0.0
+##?
+##? Usage:
+##?   empty_trash
+docs::parse "$@"
+
+free_space_in_home() {
+	df -h ~ | tail -n1 | awk '{print $4}'
+}
+
+free_space_before_empty=$(free_space_in_home)
+
+sudo apt-get clean && sudo apt-get autoclean
+sudo apt-get autoremove -y
+echo '🗑   Apt cache cleaned'
+
+sudo deborphan | xargs sudo apt-get -y remove --purge
+sudo apt-get clean
+echo '🗑   Deborphans removed'
+
+sudo rm -rf /usr/share/man/??
+sudo rm -rf /usr/share/man/??_*
+echo '🗑   Man removed'
+
+sudo rm -rf /home/*/.local/share/Trash/*/**
+sudo rm -rf /root/.local/share/Trash/*/**
+echo '🗑   All trashes empty'
+
+sudo find /var/log -type f -regex ".*\.gz$" | sudo xargs rm -Rf
+sudo find /var/log -type f -regex ".*\.[0-9]$" | sudo xargs rm -Rf
+echo '🗑   Logs removed'
+
+dpkg-query -l|grep linux-im*
+#dpkg-query -l |grep linux-im*|awk '{print $2}'
+sudo apt-get purge $(dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | head -n -1) --assume-yes
+sudo apt-get install linux-headers-`uname -r|cut -d'-' -f3`-`uname -r|cut -d'-' -f4`
+sudo apt-get autoremove -y
+echo '🗑   Old kernels removed'
+
+free_space_after_empty=$(free_space_in_home)
+
+echo "Done! Free space before: $free_space_before_empty, free space now: $free_space_after_empty"
