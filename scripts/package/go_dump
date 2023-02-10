@@ -20,7 +20,15 @@ paths=()
 
 for p in $packages; do
 	path=$(go version -m -v "$GOBIN/$p" | sed -n '2 p' | awk '{print $2}')
-	paths+=("$path")
+
+	if [[ ${paths[*]} =~ $path ]]; then
+		# whatever you want to do when array contains value
+		echo "Skipping $p"
+		continue
+	fi
+
+	version=$(go version -m -v "$GOBIN/$p" | sed -n '3 p' | awk '{print $3}')
+	paths+=("$path@$version")
 done
 
 printf "%s\n" "${paths[@]}" | sort >"$GO_DUMP_FILE_PATH"

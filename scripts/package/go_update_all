@@ -22,3 +22,5 @@ done
 for p in "${paths[@]}"; do
 	go install "$p"@latest
 done
+
+dot package go_dump
