@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Import cargo packages
+#?? 1.0.0
+##?
+##? Usage:
+##?   cargo_import
+docs::parse "$@"
+
+CARGO_DUMP_FILE_PATH="$DOTFILES_PATH/langs/rust/packages.txt"
+
+if [ -f "$CARGO_DUMP_FILE_PATH" ]; then
+	xargs -I_ cargo install "_" <"$CARGO_DUMP_FILE_PATH"
+fi
