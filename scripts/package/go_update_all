@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Update all go packages
+#?? 1.0.0
+##?
+##? Usage:
+##?   go_update_all
+docs::parse "$@"
+
+packages=$(ls -1 "$GOBIN")
+paths=()
+
+for p in $packages
+do
+	path=$(go version -m -v "$GOBIN/$p" | sed -n '2 p' | awk '{print $2}')
+	paths+=("$path")
+done
+
+for p in $paths
+do
+	go install "$p"@latest
+done
