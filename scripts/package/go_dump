@@ -4,9 +4,15 @@ set -euo pipefail
 
 source "$DOTLY_PATH/scripts/core/_main.sh"
 
-##? Kill process named
+##? Dump go packages
 #?? 1.0.0
 ##?
 ##? Usage:
-##?   kill_named <to_kill>
+##?   go_dump
 docs::parse "$@"
+
+GO_DUMP_FILE_PATH="$DOTFILES_PATH/langs/go/packages.txt"
+
+mkdir -p "$DOTFILES_PATH/langs/go"
+
+ls -1 "$GOBIN" >"$GO_DUMP_FILE_PATH"
