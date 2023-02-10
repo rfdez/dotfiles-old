@@ -6,6 +6,8 @@
       force: true
 
 - link:
+    /etc/default/keyboard: os/linux/configs/keyboard
+    /usr/share/X11/xorg.conf.d/00-keyboard.conf: os/linux/xorg.conf.d/00-keyboard.conf
     ~/.config/autostart: os/linux/autostart
     ~/.xinputrc: os/linux/.xinputrc
     ~/.config/rofi/config.rasi: os/linux/rofi/config.rasi
