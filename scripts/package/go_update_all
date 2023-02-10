@@ -14,13 +14,11 @@ docs::parse "$@"
 packages=$(ls -1 "$GOBIN")
 paths=()
 
-for p in $packages
-do
+for p in $packages; do
 	path=$(go version -m -v "$GOBIN/$p" | sed -n '2 p' | awk '{print $2}')
 	paths+=("$path")
 done
 
-for p in $paths
-do
+for p in $paths; do
 	go install "$p"@latest
 done
