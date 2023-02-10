@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Import go packages
+#?? 1.0.0
+##?
+##? Usage:
+##?   go_import
+docs::parse "$@"
+
+GO_DUMP_FILE_PATH="$DOTFILES_PATH/langs/go/packages.txt"
+
+if [ -f "$GO_DUMP_FILE_PATH" ]; then
+	xargs -I_ go install "_"@latest <"$GO_DUMP_FILE_PATH"
+fi
