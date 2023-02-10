@@ -19,6 +19,6 @@ for p in $packages; do
 	paths+=("$path")
 done
 
-for p in $paths; do
+for p in "${paths[@]}"; do
 	go install "$p"@latest
 done

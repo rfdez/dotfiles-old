@@ -27,10 +27,10 @@ function notify() {
 
 function display() {
 	emoji=$(cat "$EMOJI_FILE" | grep -v '#' | grep -v '^[[:space:]]*$')
-	line=$(echo "$emoji" | rofi -font "Monospace 30" -theme Monokai -dmenu -i -p emoji -kb-custom-1 Ctrl+c $@)
+	line=$(echo "$emoji" | rofi -font "Monospace 30" -theme Monokai -dmenu -i -p emoji -kb-custom-1 Ctrl+c "$@")
 	exit_code=$?
 
-	line=($line)
+	line=("$line")
 
 	if [ $exit_code == 0 ]; then
 		sleep 0.1 # Delay pasting so the text-entry can come active
@@ -45,4 +45,4 @@ if [ ! -f "$EMOJI_FILE" ]; then
 	dot emoji download
 fi
 
-display
+display "$@"

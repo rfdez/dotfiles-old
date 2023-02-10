@@ -15,4 +15,4 @@ NPM_DUMP_FILE_PATH="$DOTFILES_PATH/langs/js/global_modules.txt"
 
 mkdir -p "$DOTFILES_PATH/langs/js"
 
-ls -1 $(npm root -g) | grep -v npm >"$NPM_DUMP_FILE_PATH"
+ls -1 "$(npm root -g)" | grep -v npm >"$NPM_DUMP_FILE_PATH"

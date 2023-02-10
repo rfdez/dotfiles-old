@@ -35,7 +35,7 @@ function notify() {
 }
 
 function download() {
-	notify $(basename "$0") 'Downloading all emoji for your pleasure'
+	notify "$(basename "$0")" 'Downloading all emoji for your pleasure'
 
 	echo "" >"$EMOJI_FILE"
 
@@ -57,7 +57,7 @@ function download() {
 		echo "$emojis" >>"$EMOJI_FILE"
 	done
 
-	notify $(basename "$0") "We're all set!"
+	notify "$(basename "$0")" "We're all set!"
 }
 
 download
