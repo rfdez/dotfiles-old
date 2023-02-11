@@ -1,3 +1,2 @@
-alacritty
-choose
-docpars
+choose@1.3.4
+docpars@0.2.0
