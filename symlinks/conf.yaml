@@ -6,6 +6,8 @@
       force: true
 
 - create:
+    - $DOTFILES_PATH/shell/bash/completions
+    - $DOTFILES_PATH/shell/bash/themes
     - ~/.z
 
 - link:
