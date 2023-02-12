@@ -17,5 +17,6 @@
     ~/.config/Code/User/keybindings.json: editors/code/keybindings.json
     ~/.config/Code/User/settings.json: editors/code/settings.json
     ~/.config/Code/User/snippets: editors/code/snippets
+    ~/.config/kitty/kitty.conf: os/linux/kitty/kitty.conf
     ~/.tmux.conf: os/linux/tmux/.tmux.conf
     ~/.dotly: os/linux/.dotly
