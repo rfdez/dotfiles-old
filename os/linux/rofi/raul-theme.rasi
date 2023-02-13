@@ -2,7 +2,7 @@
     /* Theme settings */
     highlight: bold;
 
-    font: "IBM Plex Mono 18";
+    font: "FiraCode Nerd Font 16";
 
 
     /* Gruvbox dark colors */
