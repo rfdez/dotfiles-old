@@ -10,8 +10,8 @@ alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
 
 # Jumps
-alias gtwp="cd $PROJECTS_HOME/Work"
-alias gtpp="cd $PROJECTS_HOME/Personal"
+alias gtwp="cd $PROJECTS_HOME/flexiwatt"
+alias gtpp="cd $PROJECTS_HOME/rfdez"
 alias tmp="cd ~/Desktop/tmp"
 
 # Git
