@@ -3,47 +3,5 @@
 	email = raulparri71@gmail.com
 	signingkey = 046E207E054DCA3F
 
-[fetch]
-	prune = true
-
-[push]
-	default = simple
-    autoSetupRemote = true
-
 [core]
-	excludesfile = ~/.gitignore_global
-	attributesfile = ~/.gitattributes
-	editor = vim
 	sshCommand = ssh -i ~/.ssh/raulfernandezdev
-    autocrlf = input
-	trustctime = false
-	precomposeunicode = false
-	pager = delta --dark
-	ignorecase = false
-
-[help]
-	autocorrect = 1
-
-[diff]
-	tool = vimdiff
-	compactionHeuristic = true
-	indentHeuristic = true
-
-[difftool]
-	prompt = false
-
-[apply]
-	# Detect whitespace errors when applying a patch
-	whitespace = fix
-
-[pull]
-	rebase = true
-
-[commit]
-	gpgsign = true
-
-[tag]
-	gpgsign = true
-
-[init]
-	defaultBranch = main

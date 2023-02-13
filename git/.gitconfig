@@ -4,3 +4,47 @@
   path = .gitconfig_work
 [includeIf "gitdir:~/.dotfiles/"]
   path = .gitconfig_personal
+
+[fetch]
+	prune = true
+
+[push]
+	default = simple
+    autoSetupRemote = true
+
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes
+	editor = vim
+    autocrlf = input
+	trustctime = false
+	precomposeunicode = false
+	pager = delta --dark
+	ignorecase = false
+
+[help]
+	autocorrect = 1
+
+[diff]
+	tool = vimdiff
+	compactionHeuristic = true
+	indentHeuristic = true
+
+[difftool]
+	prompt = false
+
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+
+[pull]
+	rebase = true
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
+[init]
+	defaultBranch = main
