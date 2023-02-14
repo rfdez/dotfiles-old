@@ -2,6 +2,10 @@
 
 set -euo pipefail
 
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+output::h1 "Installing kitty"
+
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in
@@ -14,3 +18,5 @@ cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/appli
 # Update the paths to the kitty and its icon in the kitty.desktop file(s)
 sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
 sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
+
+output::h1 "Kitty installed"
