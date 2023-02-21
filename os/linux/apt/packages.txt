@@ -20,6 +20,7 @@ dconf-editor
 deborphan
 default-jre
 diffutils
+dkms
 docker-buildx-plugin
 docker-ce
 docker-ce-cli
@@ -72,6 +73,7 @@ liblzma-dev
 libnss3-tools
 libstdc++6:i386
 libxml2-utils
+linux-headers-5.15.0-58-generic
 lsb-release
 migrate
 mokutil
@@ -114,7 +116,6 @@ texlive-latex-recommended
 texlive-pictures
 texlive-xetex
 tldr
-tmux
 tree
 typora
 ubuntu-desktop
@@ -125,11 +126,10 @@ ubuntu-wallpapers
 ufw
 unzip
 vim
-virtualbox-qt
+virtualbox-7.0
 wmctrl
 xclip
 xdotool
 xsel
 xz-utils
-yarn
 zsh
