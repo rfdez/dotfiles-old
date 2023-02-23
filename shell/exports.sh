@@ -60,7 +60,6 @@ export PROJECTS_HOME="$HOME/Code"
 # ------------------------------------------------------------------------------
 path=(
   "$HOME/bin"
-  "$HOME/.local/bin"
   "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
   "$JAVA_HOME/bin"
