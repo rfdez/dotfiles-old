@@ -1,4 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
+tap "supabase/tap"
 brew "act"
 brew "git-delta"
+brew "supabase/tap/supabase"

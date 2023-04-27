@@ -23,6 +23,7 @@ export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 export GEM_HOME="$HOME/.gem"
 export CARGO_HOME="$HOME/.cargo"
 export GOPATH="$HOME/.go"
+export GOBIN="$GOPATH/bin"
 export GO111MODULE=auto
 
 # ------------------------------------------------------------------------------
@@ -65,7 +66,7 @@ path=(
   "$DOTFILES_PATH/bin"
   "$JAVA_HOME/bin"
   "$GEM_HOME/bin"
-  "$GOPATH/bin"
+  "$GOBIN"
   "$CARGO_HOME/bin"
   "$BREW_HOME/bin"
   "/usr/local/opt/ruby/bin"

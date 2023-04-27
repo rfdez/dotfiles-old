@@ -1,10 +1,12 @@
 ansible
+ansible-lint
 apt-transport-https
 base-passwd
 bash-completion
 bijiben
 bottom
 bsdutils
+build-essential
 bzip2
 ca-certificates
 cgroup-lite
@@ -34,6 +36,7 @@ font-manager
 fontforge
 fonts-indic
 fzf
+g++
 git
 gnome-shell-extensions
 gnupg
@@ -71,10 +74,12 @@ libcanberra-gtk3-module
 libdebconfclient0
 liblzma-dev
 libnss3-tools
+libpq-dev
 libstdc++6:i386
 libxml2-utils
 linux-headers-5.15.0-58-generic
 lsb-release
+make
 migrate
 mokutil
 mono-complete
@@ -83,6 +88,7 @@ nautilus-admin
 ncdu
 ncurses-base
 ncurses-bin
+neovim
 net-tools
 ninja-build
 nmap
@@ -91,11 +97,14 @@ pandoc
 pavucontrol
 peek
 pgadmin4-desktop
+php
 pkg-config
 protobuf-compiler
+python3
 python3-pip
 python3-tk
 python3-venv
+qemu
 rofi
 rpi-imager
 ruby-full
@@ -132,4 +141,5 @@ xclip
 xdotool
 xsel
 xz-utils
+zeal
 zsh
