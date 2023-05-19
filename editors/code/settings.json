@@ -86,7 +86,7 @@
       "source.fixAll.shellcheck": true
     },
   },
-  "[typescript][javascript]": {
+  "[typescript][javascript][typescriptreact][javascriptreact]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": [
       "source.addMissingImports",
@@ -99,5 +99,18 @@
       "source.fixAll.stylelint": true
     },
   },
-  "gitlens.codeLens.enabled": false
+  "gitlens.codeLens.enabled": false,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--fast",
+    "--fix"
+  ],
+  "go.diagnostic.vulncheck": "Imports",
+  "go.autocompleteUnimportedPackages": true,
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  }
 }
