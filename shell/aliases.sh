@@ -50,3 +50,6 @@ alias htop='btm'
 
 # Package managers
 alias pn='pnpm'
+
+# Kitty
+alias ssh="kitty +kitten ssh"
