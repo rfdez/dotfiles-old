@@ -14,6 +14,7 @@
   "editor.wordWrap": "off",
   "editor.wrappingIndent": "indent",
   "editor.renderWhitespace": "all",
+  "editor.stickyScroll.enabled": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
   "editor.cursorBlinking": "expand",
@@ -122,5 +123,6 @@
   ],
   "files.associations": {
     ".env.*": "properties"
-  }
+  },
+  "json.sortOnSave.enable": false
 }
