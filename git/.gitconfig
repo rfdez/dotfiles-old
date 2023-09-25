@@ -1,6 +1,8 @@
 [includeIf "gitdir:~/Code/rfdez/"]
   path = .gitconfig_personal
 [includeIf "gitdir:~/Code/flexiwatt/"]
+  path = .gitconfig_personal
+[includeIf "gitdir:~/Code/flexiwatt-old/"]
   path = .gitconfig_work
 [includeIf "gitdir:~/.dotfiles/"]
   path = .gitconfig_personal
